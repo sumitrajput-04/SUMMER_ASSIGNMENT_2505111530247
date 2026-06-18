@@ -1,11 +1,31 @@
 #include <stdio.h>
+
 int main()
 {
-    float m1 = 33;
-    float m2 = 38;
-    float m3 = 37;
-    float m4 = 38;
-    float p = (m1 + m2 + m3 + m4) / 4;
-    printf("Percentage = %f", p);
+    int a[3][3], b[3][3], c[3][3];
+    int i, j;
+
+    printf("Enter first matrix:\n");
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Enter second matrix:\n");
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            scanf("%d", &b[i][j]);
+
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            c[i][j] = a[i][j] + b[i][j];
+
+    printf("Sum Matrix:\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+            printf("%d ", c[i][j]);
+        printf("\n");
+    }
+
     return 0;
 }
